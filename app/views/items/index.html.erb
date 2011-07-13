@@ -31,9 +31,7 @@
         <% current_user.items.each do |item| %>
           <li>
             <em><%= item.title %></em>
-            <% if user_signed_in? && item.giver == current_user %>
-              <%= link_to raw("<span class='cross icon'></span>Cancelar"), item, :method => :delete, :class => "negative button" %>
-            <% end %>
+            <%= link_to raw("<span class='cross icon'></span>Cancelar"), item, :method => :delete, :class => "negative button" %>
           </li>
         <% end %>
       </ol>
@@ -46,9 +44,6 @@
       <% @reserved_items.each do |item| %>
         <li>
           <em><%= item.title %></em>
-          <% if user_signed_in? && item.giver == current_user %>
-            <%= link_to raw("<span class='cross icon'></span>Cancelar"), item, :method => :delete, :class => "negative button" %>
-          <% end %>
         </li>
       <% end %>
     </ol>

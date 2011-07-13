@@ -1,7 +1,7 @@
 GiftList::Application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
-  get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  end
 
   root :to => "items#index"
   get "items/index"

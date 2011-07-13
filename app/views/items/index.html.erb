@@ -6,13 +6,13 @@
     Utilize sua conta do facebook para reservar seu presente: <%= link_to image_tag("connect.gif"), user_omniauth_authorize_path(:facebook) %>
   <% end %>
   </p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </div>
 
 <div id="wrapper">
   <div id="page">
   <h1><small>Guxos' Fest -</small> <strong>Chá de Casa Nova</strong></h1>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <ul>
       <% @available_items.each do |item| %>
         <li>
@@ -27,26 +27,26 @@
     <% if user_signed_in? && current_user.items.present? %>
       <hr/><br/>
       <h2>Reservados por você</h2>
-      <ol>
+      <ul>
         <% current_user.items.each do |item| %>
           <li>
             <em><%= item.title %></em>
             <%= link_to raw("<span class='cross icon'></span>Cancelar"), item, :method => :delete, :class => "negative button" %>
           </li>
         <% end %>
-      </ol>
+      </ul>
     <% end %>
 
     <% if @reserved_items.present? %>
     <hr/><br/>
-    <h2>Reservados</h2>
-    <ol>
+    <h2>Reservados por outros</h2>
+    <ul>
       <% @reserved_items.each do |item| %>
         <li>
           <em><%= item.title %></em>
         </li>
       <% end %>
-    </ol>
+    </ul>
     <% end %>
   </div>
 </div>

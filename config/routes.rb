@@ -4,7 +4,7 @@ GiftList::Application.routes.draw do
   end
 
   root :to => "items#index"
-  get "items/index"
+  resources :items
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

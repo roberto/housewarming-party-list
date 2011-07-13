@@ -18,7 +18,7 @@
         <li>
           <strong><%= item.title %></strong>
           <% if user_signed_in? %>
-            <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), "#", :class => "positive button" %>
+            <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), @item, :method => :post, :class => "positive button" %>
           <% end %>
         </li>
       <% end %>
@@ -30,7 +30,7 @@
         <li>
           <em><%= item.title %></em>
           <% if user_signed_in? && item.giver == current_user %>
-            <%= link_to raw("<span class='cross icon'></span>Cancelar"), "#", :class => "negative button" %>
+            <%= link_to raw("<span class='cross icon'></span>Cancelar"), @item, :method => :delete, :class => "negative button" %>
           <% end %>
         </li>
       <% end %>

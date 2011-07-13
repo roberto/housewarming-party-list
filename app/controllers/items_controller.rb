@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index
-    @available_items = Item.where(:giver => ["",nil]).all
-    @reserved_items = Item.where("giver <> ''").all
+    @available_items = Item.where(:giver_id => nil).all
+    @reserved_items = Item.where("giver_id IS NOT NULL").all
   end
 
   def update

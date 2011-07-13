@@ -1,0 +1,23 @@
+<div id="wrapper">
+  <div id="page">
+  <h1>Chá de Casa Nova</h1>
+    <ul>
+      <% @available_items.each do |item| %>
+        <li>
+          <strong><%= item.title %></strong>
+          <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), "#", :class => "positive button" %>
+        </li>
+      <% end %>
+    </ul>
+    <hr/><br/>
+    <h2>Reservados</h2>
+    <ol>
+      <% @reserved_items.each do |item| %>
+        <li>
+          <em><%= item.title %></em>
+          <%= link_to raw("<span class='cross icon'></span>Cancelar"), "#", :class => "negative button" %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+</div>

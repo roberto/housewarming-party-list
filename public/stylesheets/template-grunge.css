@@ -1,0 +1,251 @@
+
+/* ------ NOTES ---------------------------------------------------------------
+
+Grunge Template for Wihslistr wishlist.
+
+--------- UPDATE INFO ---------------------------------------------------------
+
+Last updated: September 7 2007
+Last update made by: Jimmy Nordlund (jimmy@digitalvenues.se)
+
+--------- CONTENTS ------------------------------------------------------------
+
+1: BODY AND UNIVERSAL RESET
+2: TOP BAR
+3: PAGE
+4: FOOTER
+5: LIST
+6: HEADING
+7: IMAGE
+8: ADS
+9: MISC
+    
+---------------------------------------------------------------------------- */
+
+
+
+/* 1: BODY AND UNIVERSAL RESET
+============================================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000 url(/images/templates/grunge-bg.jpg) top center repeat-y;
+    color: #000;
+    font: 13px/160% Arial, Helvetica, Verdana, sans-serif;
+    text-align: center;
+    }
+
+/* Reset margin and padding for all elements */
+
+* {margin: 0; padding: 0;}
+
+
+/* 2: TOP BAR
+============================================================================ */
+
+#topbar {
+    font-size: 11px;
+    font-family: Verdana, Tahoma, Arial, 'Bitstream Vera Sans', sans-serif;
+  text-align: center;
+  padding: 3px 0 7px;
+    border-bottom: 1px solid #999;
+  background-color: #222;
+  color: #fff;
+    }
+#topbar a:link, #topbar a:visited {color: #fff;}
+#topbar a:hover {text-decoration: none;}
+
+
+/* 3: PAGE
+============================================================================ */
+
+#wrapper {
+    position: relative;
+    width: 785px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    clear: both;
+    text-align: left;
+    }
+
+#page {
+    float: left;
+    width: 460px;
+    padding: 50px 40px 0 105px;
+    }
+#page span.tag {
+    margin-right: 5px;
+    padding: 0 3px 2px;
+    background: #000;
+    color: #666;
+    font-size: 11px;
+    }
+/*
+#page a:link, #page a:visited {
+    padding: 3px;
+    background: #000;
+    color: #3cf;
+    font-weight: bold;
+    text-decoration: none;
+    }   
+#page a:hover {text-decoration: underline;}
+*/
+
+
+/* 4: FOOTER
+============================================================================ */
+
+#footer {
+    display: inline;
+    float: left;
+    width: 400px;
+    margin-left: 100px;
+    padding: 20px 0 1px;
+    }
+#footer p {
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    font-size: 11px;
+    color: #000;
+    text-align: center;
+    }
+#footer a:link, #footer a:visited {
+    background: #000;
+    margin: 0 2px;
+    padding: 4px 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    }   
+#footer a:hover {background: #3cf;}
+
+
+/* 5: LIST
+============================================================================ */
+
+ul, ol {
+    list-style: none;
+    margin-bottom: 20px;
+    line-height: 160%;
+    }
+ol {list-style: decimal inside;}
+ul li, ol li {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    }
+ul li strong, ol li strong {
+    padding: 3px;
+    background: #000;
+    color: #fff;
+    font-size: 19px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    line-height: 170%;
+    }
+ul li em, ol li em {
+    padding: 3px;
+    color: #ccc;
+    background: #666;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 220%;
+    }
+/*
+ul li a:link, ul li a:visited, ol li a:link, ol li a:visited {
+    padding: 3px;
+    background: #000;
+    color: #3cf;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+    }   
+ul li a:hover, ol li a:hover {text-decoration: underline;}
+*/
+    
+
+/* 6: HEADING
+============================================================================ */
+
+h1 {
+    padding-bottom: 50px;
+    color: #000;
+    font-size: 30px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    }
+
+h2 {
+    padding-bottom: 50px;
+    color: gray;
+    font-size: 20px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    }
+
+
+/* 7: IMAGE
+============================================================================ */
+
+img {
+    diplay: inline;
+    float: right;
+    margin: 0 20px 20px 20px;
+    padding: 2px;
+    background: #fff;
+    border: 3px solid #000;
+    }
+
+        
+/* 8: ADS
+============================================================================ */
+
+#adspace {
+    display: inline;
+    float: left;
+    width: 120px;
+    margin: 120px 0 0 60px;
+    background: #000;
+    color: #fff;
+    line-height: 160%;
+    }
+
+
+/* 9: MISC
+============================================================================ */
+
+.clearall {
+    display: block;
+    clear: both;
+    height: 1px;
+    margin: 0;
+    font-size: 1px;
+    line-height: 1px;
+    }
+
+/* sIFR styles */
+    
+.sIFR-flash {
+    visibility: visible !important;
+    margin: 0;
+    }
+.sIFR-replaced {
+    visibility: visible !important;
+    }
+span.sIFR-alternate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    }
+.sIFR-hasFlash h1 {
+    visibility: hidden;
+    letter-spacing: -1px;
+    font-size: 32px;
+    }
+

@@ -53,8 +53,13 @@ body {
   background-color: #222;
   color: #fff;
     }
-#topbar a:link, #topbar a:visited {color: #fff;}
+#topbar img {
+  padding: 0px;
+  display: block;
+}
+/*#topbar a:link, #topbar a:visited {color: #fff;}
 #topbar a:hover {text-decoration: none;}
+*/
 
 
 /* 3: PAGE

@@ -1,10 +1,10 @@
 GiftList::Application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   root :to => "items#index"
-  
   get "items/index"
 
   ActiveAdmin.routes(self)
-
   devise_for :admin_users, ActiveAdmin::Devise.config
 
 

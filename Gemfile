@@ -9,6 +9,7 @@ gem 'mysql'
 gem 'sqlite3'
 gem 'activeadmin'
 gem "meta_search", "~> 1.0.6"
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -5,7 +5,10 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'mysql'
 gem 'sqlite3'
+gem 'activeadmin'
+gem "meta_search", "~> 1.0.6"
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,3 +32,7 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :development do
+  gem 'heroku'
+end

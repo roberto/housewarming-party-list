@@ -23,6 +23,23 @@
         </li>
       <% end %>
     </ul>
+
+    <% if user_signed_in? && current_user.items.present? %>
+      <hr/><br/>
+      <h2>Reservados por você</h2>
+      <ol>
+        <% current_user.items.each do |item| %>
+          <li>
+            <em><%= item.title %></em>
+            <% if user_signed_in? && item.giver == current_user %>
+              <%= link_to raw("<span class='cross icon'></span>Cancelar"), item, :method => :delete, :class => "negative button" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    <% end %>
+
+    <% if @reserved_items.present? %>
     <hr/><br/>
     <h2>Reservados</h2>
     <ol>
@@ -35,5 +52,6 @@
         </li>
       <% end %>
     </ol>
+    <% end %>
   </div>
 </div>

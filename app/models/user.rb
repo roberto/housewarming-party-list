@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :items
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :rememberable, :trackable, :omniauthable
@@ -13,6 +15,10 @@ class User < ActiveRecord::Base
     else # Create a user with a stub password. 
       User.create!(:email => data["email"], :password => Devise.friendly_token[0,20]) 
     end
+  end
+
+  def title
+    email
   end
   
 end

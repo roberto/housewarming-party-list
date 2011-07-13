@@ -1,7 +1,11 @@
 class ItemsController < ApplicationController
   def index
     @available_items = Item.where(:giver_id => nil).all
-    @reserved_items = Item.where("giver_id IS NOT NULL").all
+    if user_signed_in?
+      @reserved_items = Item.where("giver_id IS NOT NULL").where("giver_id <> ?", current_user).all
+    else
+      @reserved_items = Item.where("giver_id IS NOT NULL").all
+    end
   end
 
   def show

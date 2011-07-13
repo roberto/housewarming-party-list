@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
     @item = Item.find params[:id]
     if @item.giver == current_user
       @item.giver = nil
+      @item.save
     end
     redirect_to items_url, :notice => "Reserva cancelada com sucesso."
   end

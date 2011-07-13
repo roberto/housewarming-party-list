@@ -1,15 +1,25 @@
 <div id="topbar">
-  <p>Utilize sua conta do facebook para reservar seu presente: <%= link_to image_tag("connect.gif"), user_omniauth_authorize_path(:facebook) %></p>
+  <p>
+  <% if user_signed_in? %>
+    Reserve seu presente :)
+  <% else %>
+    Utilize sua conta do facebook para reservar seu presente: <%= link_to image_tag("connect.gif"), user_omniauth_authorize_path(:facebook) %>
+  <% end %>
+  </p>
 </div>
 
 <div id="wrapper">
   <div id="page">
   <h1>Chá de Casa Nova</h1>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <ul>
       <% @available_items.each do |item| %>
         <li>
           <strong><%= item.title %></strong>
-          <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), "#", :class => "positive button" %>
+          <% if user_signed_in? %>
+            <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), "#", :class => "positive button" %>
+          <% end %>
         </li>
       <% end %>
     </ul>
@@ -19,7 +29,9 @@
       <% @reserved_items.each do |item| %>
         <li>
           <em><%= item.title %></em>
-          <%= link_to raw("<span class='cross icon'></span>Cancelar"), "#", :class => "negative button" %>
+          <% if user_signed_in? && item.giver == current_user %>
+            <%= link_to raw("<span class='cross icon'></span>Cancelar"), "#", :class => "negative button" %>
+          <% end %>
         </li>
       <% end %>
     </ol>

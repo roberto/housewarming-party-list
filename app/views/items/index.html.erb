@@ -1,13 +1,18 @@
 <div id="topbar">
   <p>
-  <% if user_signed_in? %>
-    Reserve seu presente :)
+  <% if notice || alert %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <% elsif user_signed_in? %>
+    <% if current_user.items.blank? %>
+      Reserve seu presente :)
+    <% else %>
+      Muito Obrigado! :)
+    <% end %>
   <% else %>
     Utilize sua conta do facebook para reservar seu presente: <%= link_to image_tag("connect.gif"), user_omniauth_authorize_path(:facebook) %>
   <% end %>
   </p>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </div>
 
 <div id="wrapper">

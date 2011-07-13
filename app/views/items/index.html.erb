@@ -18,7 +18,7 @@
         <li>
           <strong><%= item.title %></strong>
           <% if user_signed_in? %>
-            <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), item, :method => :post, :class => "positive button" %>
+            <%= link_to raw("<span class='leftarrow icon'></span>Reservar"), item, :method => :put, :class => "positive button" %>
           <% end %>
         </li>
       <% end %>

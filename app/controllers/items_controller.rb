@@ -7,11 +7,11 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find params[:id]
     if @item.giver.present?
-      render "index", :alert => "Item já reservado."
+      redirect_to items_url, :alert => "Item já reservado."
     else
       @item.giver = current_user
       @item.save
-      render "index", :notice => "Reservado com sucesso."
+      redirect_to items_url, :notice => "Reservado com sucesso."
     end
   end
 
@@ -20,6 +20,6 @@ class ItemsController < ApplicationController
     if @item.giver == current_user
       @item.giver = nil
     end
-    render "index", :notice => "Reserva cancelada com sucesso."
+    redirect_to items_url, :notice => "Reserva cancelada com sucesso."
   end
 end

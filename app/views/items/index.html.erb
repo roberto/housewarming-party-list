@@ -44,7 +44,7 @@
 
     <% if @reserved_items.present? %>
     <hr/><br/>
-    <h2>Reservados por outros</h2>
+    <h2>Reservados <%= "por outros" if user_signed_in? %></h2>
     <ul>
       <% @reserved_items.each do |item| %>
         <li>

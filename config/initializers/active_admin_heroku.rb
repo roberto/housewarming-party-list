@@ -14,5 +14,6 @@ if Rails.env.production?
 
   Sass::Plugin::remove_template_location template_path_two
   Sass::Plugin::add_template_location template_path_two, new_compile_path
+  Sass::Plugin.options[:never_update] = true
 end
 

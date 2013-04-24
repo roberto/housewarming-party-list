@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class ItemsController < ApplicationController
   def index
     @available_items = Item.where(:giver_id => nil).all

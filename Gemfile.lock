@@ -129,6 +129,7 @@ GEM
       oa-oauth (= 0.2.6)
       oa-openid (= 0.2.6)
     orm_adapter (0.0.5)
+    pg (0.15.1)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.3)
     rack (1.2.3)
@@ -183,5 +184,6 @@ DEPENDENCIES
   meta_search (~> 1.0.6)
   mysql
   omniauth
+  pg
   rails (= 3.0.9)
   sqlite3

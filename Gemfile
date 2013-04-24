@@ -6,11 +6,14 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
-gem 'sqlite3'
 gem 'activeadmin'
 gem "meta_search", "~> 1.0.6"
 gem 'omniauth'
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -36,5 +39,6 @@ gem 'jquery-rails'
 # end
 
 group :development do
+  gem 'sqlite3'
   gem 'heroku'
 end

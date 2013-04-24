@@ -93,6 +93,7 @@ GEM
     mysql (2.8.1)
     net-ldap (0.2.2)
     netrc (0.7.7)
+    newrelic_rpm (3.6.1.87)
     nokogiri (1.4.7)
     oa-basic (0.2.6)
       oa-core (= 0.2.6)
@@ -186,6 +187,7 @@ DEPENDENCIES
   jquery-rails
   meta_search (~> 1.0.6)
   mysql
+  newrelic_rpm
   omniauth
   pg
   rails (= 3.0.9)

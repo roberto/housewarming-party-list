@@ -10,6 +10,7 @@ gem 'activeadmin'
 gem "meta_search", "~> 1.0.6"
 gem 'omniauth'
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
